@@ -1,5 +1,6 @@
 ﻿using UnityEditor;
 using UnityEngine;
+#if UNITY_EDITOR
 
 [CustomPropertyDrawer(typeof(FieldLabelAttribute))]
 internal sealed class FieldLabelDrawer : PropertyDrawer
@@ -10,4 +11,4 @@ internal sealed class FieldLabelDrawer : PropertyDrawer
         EditorGUI.PropertyField(position, property, new GUIContent(fLabel.text));
     }
 }
-
+#endif
